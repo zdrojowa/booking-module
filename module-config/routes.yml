@@ -1,0 +1,119 @@
+index:
+  path: /dashboard/booking
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@index
+  methods:
+    - GET
+  permission: BookingModule
+
+ajax:
+  path: /dashboard/booking/ajax
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@ajax
+  methods:
+    - POST
+  permission: BookingModule
+
+add:
+  path: /dashboard/booking/create
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@add
+  methods:
+    - GET
+  permission: BookingModule.add
+
+store:
+  path: /dashboard/booking
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@store
+  methods:
+    - POST
+  permission: BookingModule.add
+
+edit:
+  path: /dashboard/booking/{{booking}}/edit
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@edit
+  methods:
+    - GET
+  permission: BookingModule.edit
+
+update:
+  path: /dashboard/booking/{{booking}}
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@update
+  methods:
+    - PUT
+    - PATCH
+  permission: BookingModule.edit
+
+destroy:
+  path: /dashboard/booking/{{booking}}
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@destroy
+  methods:
+    - DELETE
+  permission: BookingModule.delete
+
+tabs:
+  path: /dashboard/booking/tabs
+  controller: Selene\Modules\BookingModule\Http\Controllers\TabController@index
+  methods:
+    - GET
+  permission: BookingModule
+
+ajax.tabs:
+  path: /dashboard/booking/ajax/tabs
+  controller: Selene\Modules\BookingModule\Http\Controllers\TabController@ajax
+  methods:
+    - POST
+  permission: BookingModule
+
+addTab:
+  path: /dashboard/booking/create/tab
+  controller: Selene\Modules\BookingModule\Http\Controllers\TabController@add
+  methods:
+    - GET
+  permission: BookingModule.add
+
+storeTab:
+  path: /dashboard/booking/tab
+  controller: Selene\Modules\BookingModule\Http\Controllers\TabController@store
+  methods:
+    - POST
+  permission: BookingModule.add
+
+editTab:
+  path: /dashboard/booking/tab/{{tab}}/edit
+  controller: Selene\Modules\BookingModule\Http\Controllers\TabController@edit
+  methods:
+    - GET
+  permission: BookingModule.edit
+
+updateTab:
+  path: /dashboard/booking/tab/{{tab}}
+  controller: Selene\Modules\BookingModule\Http\Controllers\TabController@update
+  methods:
+    - PUT
+    - PATCH
+  permission: BookingModule.edit
+
+destroyTab:
+  path: /dashboard/booking/tab/{{tab}}
+  controller: Selene\Modules\BookingModule\Http\Controllers\TabController@destroy
+  methods:
+    - DELETE
+  permission: BookingModule.delete
+
+redirect:
+  path: /booking-engine
+  controller: Selene\Modules\BookingModule\Http\Controllers\BookingController@redirectToBooking
+  methods:
+    - POST
+
+api.tabs:
+  path: /api/booking/tabs
+  controller: Selene\Modules\BookingModule\Http\Controllers\ApiController@tabs
+  methods:
+    - POST
+    - GET
+
+api.bookings:
+  path: /api/booking/{{tab}}
+  controller: Selene\Modules\BookingModule\Http\Controllers\ApiController@bookings
+  methods:
+    - POST
+    - GET

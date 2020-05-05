@@ -1,0 +1,7 @@
+name: BookingModule
+version: 1.0.0
+
+aclAnchor: BookingModule
+aclName: Booking engine
+
+routePrefix: BookingModule

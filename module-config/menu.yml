@@ -1,0 +1,13 @@
+booking:
+  name: Booking
+  icon: mdi mdi-cash-100
+  permission: BookingModule
+  children:
+    list:
+      name: Lista
+      permission: BookingModule
+      route: BookingModule::index
+    tabs:
+      name: Zakładki
+      permission: BookingModule
+      route: BookingModule::tabs
