@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="logo_file">Plan apartamentu</label>
+                                <label for="logo_file">Logo</label>
                                 <input
                                     id="logo_file"
                                     type="file"

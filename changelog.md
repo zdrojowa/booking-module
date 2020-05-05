@@ -4,3 +4,6 @@ All notable changes to `BookingModule` will be documented in this file.
 
 ## Version 1.0.0
 - init
+
+## Version 1.0.1
+- fix route

@@ -41,7 +41,7 @@ class TabController extends Controller
         $tab = $this->save($request);
         if ($tab) {
             $request->session()->flash('alert-success', 'Pomyślnie dodano nową zakładkę w booking engine!');
-            return redirect()->route('BookingModule::tabs.edit', ['tab' => $tab]);
+            return redirect()->route('BookingModule::editTab', ['tab' => $tab]);
         }
 
         $request->session()->flash('alert-error', 'Ooops. Try again.');
