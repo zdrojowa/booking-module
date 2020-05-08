@@ -1,6 +1,6 @@
 <?php
 
-namespace Selene\Module\BookingModule\Services;
+namespace Selene\Modules\BookingModule\Services;
 
 use Selene\Modules\BookingModule\Models\Booking;
 use Selene\Modules\BookingModule\Models\Tab;

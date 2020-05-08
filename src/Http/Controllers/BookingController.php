@@ -7,11 +7,11 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Redirect;
-use Selene\Module\BookingModule\Services\BookingService;
 use Selene\Modules\BookingModule\Http\Requests\StoreBookingItemRequest;
 use Selene\Modules\BookingModule\Http\Requests\UpdateBookingItemRequest;
 use Selene\Modules\BookingModule\Models\Booking;
 use Selene\Modules\BookingModule\Models\Tab;
+use Selene\Modules\BookingModule\Services\BookingService;
 use Selene\Modules\DashboardModule\ZdrojowaTable;
 
 /**
@@ -87,7 +87,7 @@ class BookingController extends Controller
         }
     }
 
-    public function redirectToBooking(Request $request): RedirectResponse
+    public function redirectToBooking(Request $request)
     {
         $bookingService = new BookingService(
             Tab::findOrFail($request->get('booking_tab')),
@@ -95,8 +95,6 @@ class BookingController extends Controller
             $request->all()
         );
 
-        $link = $bookingService->getLink();
-
-        return Redirect::to($link);
+        return ['redirect' => $bookingService->getLink()];
     }
 }
