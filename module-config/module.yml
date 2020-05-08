@@ -1,5 +1,5 @@
 name: BookingModule
-version: 1.0.1
+version: 1.0.2
 
 aclAnchor: BookingModule
 aclName: Booking engine

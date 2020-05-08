@@ -117,3 +117,10 @@ api.bookings:
   methods:
     - POST
     - GET
+
+api.bookings.all:
+  path: /api/bookings
+  controller: Selene\Modules\BookingModule\Http\Controllers\ApiController@allBookings
+  methods:
+    - POST
+    - GET

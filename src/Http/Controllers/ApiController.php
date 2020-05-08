@@ -14,12 +14,27 @@ use Selene\Modules\BookingModule\Models\Tab;
 class ApiController extends Controller
 {
     public function tabs(Request $request) {
-        return response()->json(Tab::query()->orderBy('order')->get());
+        return response()->json(Tab::query()->orderBy('order')->get(['_id', 'logo', 'name']));
     }
 
     public function bookings(string $tabId) {
         return response()->json(
-            Booking::query()->where('tab_id', '=', $tabId)->orderBy('order')->get()
+            Booking::query()->where('tab_id', '=', $tabId)->orderBy('order')->get(['_id', 'name', 'is_default'])
         );
+    }
+
+    public function allBookings(string $tabId = null) {
+
+        $tabs     = Tab::query()->orderBy('order')->get();
+        $bookings = [];
+        
+        foreach ($tabs as $tab) {
+            $bookings[] = Booking::query()
+                ->where('tab_id', '=', $tab->_id)
+                ->orderBy('order')
+                ->get(['_id', 'name', 'is_default']);
+        }
+
+        return response()->json($bookings);
     }
 }

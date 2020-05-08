@@ -7,3 +7,6 @@ All notable changes to `BookingModule` will be documented in this file.
 
 ## Version 1.0.1
 - fix route
+
+## Version 1.0.2
+- add route all bookings
