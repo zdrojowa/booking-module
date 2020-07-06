@@ -54,7 +54,7 @@ class BookingController extends Controller
 
     public function update(UpdateBookingItemRequest $request, Booking $booking)
     {
-        if ($this->save($request)) {
+        if ($this->save($request, $booking)) {
             $request->session()->flash('alert-success', 'Pomyślnie zaktualizowano booking.');
         } else {
             $request->session()->flash('alert-error', 'Ooops. Try again.');
