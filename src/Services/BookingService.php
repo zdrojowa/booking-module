@@ -7,22 +7,19 @@ use Selene\Modules\BookingModule\Models\Tab;
 
 class BookingService
 {
-    private Tab $tab;
-
     private Booking $booking;
 
     private array $request;
 
-    public function __construct(Tab $tab, Booking $booking, array $request)
+    public function __construct(Booking $booking, array $request)
     {
-        $this->tab     = $tab;
         $this->booking = $booking;
         $this->request = $request;
     }
 
     public function getLink()
     {
-        $link = $this->tab->link;
+        $link = $this->booking->getTab()->link;
         $link = str_replace('%%code%%', $this->booking->code, $link);
         if (isset($this->request['booking_from'])) {
             $link = str_replace(

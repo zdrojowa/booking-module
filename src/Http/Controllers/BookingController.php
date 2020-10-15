@@ -90,7 +90,6 @@ class BookingController extends Controller
     public function redirectToBooking(Request $request)
     {
         $bookingService = new BookingService(
-            Tab::findOrFail($request->get('booking_tab')),
             Booking::findOrFail($request->get('booking_option')),
             $request->all()
         );

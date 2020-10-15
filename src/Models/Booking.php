@@ -18,4 +18,9 @@ class Booking extends Model
     ];
 
     protected $connection = 'mongodb';
+    
+    public function getTab()
+    {
+        return Tab::find($this->tab_id);
+    }
 }
