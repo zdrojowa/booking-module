@@ -6,6 +6,7 @@ use Jenssegers\Mongodb\Eloquent\Model;
 
 /**
  * @method static findOrFail($get)
+ * @property  code
  */
 class Booking extends Model
 {

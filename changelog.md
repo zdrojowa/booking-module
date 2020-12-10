@@ -19,3 +19,6 @@ All notable changes to `BookingModule` will be documented in this file.
 
 ## Version 1.0.5
 - book by hotel
+
+## Version 1.0.6
+- fix getLink

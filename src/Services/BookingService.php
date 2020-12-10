@@ -3,7 +3,6 @@
 namespace Selene\Modules\BookingModule\Services;
 
 use Selene\Modules\BookingModule\Models\Booking;
-use Selene\Modules\BookingModule\Models\Tab;
 
 class BookingService
 {
@@ -19,7 +18,11 @@ class BookingService
 
     public function getLink()
     {
-        $link = $this->booking->getTab()->link;
+        $tab = $this->booking->getTab();
+        if (!$tab) {
+            return null;
+        }
+        $link = $tab->link;
         $link = str_replace('%%code%%', $this->booking->code, $link);
         if (isset($this->request['booking_from'])) {
             $link = str_replace(
