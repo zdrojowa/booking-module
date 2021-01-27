@@ -70,7 +70,7 @@ class TabController extends Controller
             $file     = $request->file('logo_file');
             $filename = md5(uniqid($file->getClientOriginalName(), true));
             $path     = $file->move(
-                'storage/booking/tabs/',
+                 base_path() . '/storage/booking/tabs/',
                 $filename . '.' . $file->getClientOriginalExtension()
             )->getPathName();
 
