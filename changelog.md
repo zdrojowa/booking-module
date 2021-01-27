@@ -23,5 +23,5 @@ All notable changes to `BookingModule` will be documented in this file.
 ## Version 1.0.6
 - fix getLink
 
-## Version 1.0.6
+## Version 1.1.0
 - Disable hotels from booking list
