@@ -25,3 +25,6 @@ All notable changes to `BookingModule` will be documented in this file.
 
 ## Version 1.1.0
 - Disable hotels from booking list
+
+## Version 1.1.1
+- Include all hotels in booking

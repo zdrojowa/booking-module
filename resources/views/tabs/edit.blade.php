@@ -64,6 +64,17 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="form-group col-3">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        @php
+                                            $checked = isset($tab) ? $tab->include_all_bookings ?? false : false;
+                                        @endphp
+                                        <input type="checkbox" class="form-check-input" name="include_all_bookings" @if($checked) checked @endif>
+                                        Wszystkie hotele <i class="input-helper"></i>
+                                    </label>
+                                </div>
+                            </div>
 
                             <button type="submit" class="float-right mt-2 btn btn-primary mr-2">Zapisz</button>
                         </form>

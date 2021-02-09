@@ -17,7 +17,7 @@ use Selene\Modules\HotelModule\Models\Hotels;
 class ApiController extends Controller
 {
     public function tabs(Request $request) {
-        return response()->json(Tab::query()->orderBy('order')->get(['_id', 'logo', 'name']));
+        return response()->json(Tab::query()->orderBy('order')->get(['_id', 'logo', 'name', 'include_all_bookings']));
     }
 
     public function bookings(string $tabId) {

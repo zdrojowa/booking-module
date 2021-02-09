@@ -14,6 +14,7 @@ class Tab extends Model
         'link',
         'logo',
         'order',
+        'include_all_bookings'
     ];
 
     protected $connection = 'mongodb';
