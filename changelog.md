@@ -28,3 +28,6 @@ All notable changes to `BookingModule` will be documented in this file.
 
 ## Version 1.1.1
 - Include all hotels in booking
+
+## Version 1.1.2
+- Fix updating tab

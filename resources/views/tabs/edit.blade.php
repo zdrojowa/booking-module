@@ -70,6 +70,7 @@
                                         @php
                                             $checked = isset($tab) ? $tab->include_all_bookings ?? false : false;
                                         @endphp
+                                        <input type="hidden" value="0" name="include_all_bookings">
                                         <input type="checkbox" class="form-check-input" name="include_all_bookings" @if($checked) checked @endif>
                                         Wszystkie hotele <i class="input-helper"></i>
                                     </label>

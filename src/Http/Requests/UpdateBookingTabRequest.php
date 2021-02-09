@@ -9,7 +9,7 @@ class UpdateBookingTabRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|unique:mongodb.tabs,' . $this->tab,
+            'name' => 'required|string',
             'link' => 'required|string',
             'order' => 'required|numeric',
         ];
