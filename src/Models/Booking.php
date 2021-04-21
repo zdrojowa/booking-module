@@ -16,6 +16,7 @@ class Booking extends Model
         'code',
         'order',
         'is_default',
+        'custom_link'
     ];
 
     protected $connection = 'mongodb';

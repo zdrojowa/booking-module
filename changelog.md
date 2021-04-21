@@ -31,3 +31,6 @@ All notable changes to `BookingModule` will be documented in this file.
 
 ## Version 1.1.2
 - Fix updating tab
+
+## Version 1.2.0
+- Add booking custom link

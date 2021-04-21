@@ -22,7 +22,7 @@ class BookingService
         if (!$tab) {
             return null;
         }
-        $link = $tab->link;
+        $link = $this->booking->custom_link ? $this->booking->custom_link : $tab->link;
         $link = str_replace('%%code%%', $this->booking->code, $link);
         if (isset($this->request['booking_from'])) {
             $link = str_replace(

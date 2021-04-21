@@ -42,6 +42,14 @@
                                 @enderror
                             </div>
 
+                            <div class="form-group @error('custom_link') has-danger @enderror col-12">
+                                <label for="">Custom link pattern</label>
+                                <input type="text" class="form-control" name="custom_link" value="{{ isset($booking) ? $booking->custom_link : old('custom_link') }}">
+                                @error('custom_link')
+                                <small class="error mt-1 text-danger d-block">{{ $message }}</small>
+                                @enderror
+                            </div>
+
                             <div class="form-group col-3">
                                 <label for="">Zakładka</label>
                                 <select name="tab_id" id="tab" class="form-control">
