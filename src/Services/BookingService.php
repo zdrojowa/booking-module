@@ -2,6 +2,7 @@
 
 namespace Selene\Modules\BookingModule\Services;
 
+use Carbon\Carbon;
 use Selene\Modules\BookingModule\Models\Booking;
 
 class BookingService
@@ -43,6 +44,19 @@ class BookingService
         if (isset($this->request['booking_nights'])) {
             $link = str_replace('%%nights%%', $this->request['booking_nights'], $link);
         }
+
+        $now = Carbon::now();
+        $link = str_replace(
+            ['%%from%%', '%%fromWithoutDashes%%'],
+            [$now->toDateString(), str_replace('-', '', $now->toDateString())],
+            $link
+        );
+        $now->addWeek();
+        $link = str_replace(
+            ['%%to%%', '%%toWithoutDashes%%', '%%nights%%'],
+            [$now->toDateString(), str_replace('-', '', $now->toDateString()), 7],
+            $link
+        );
 
         return $link;
     }

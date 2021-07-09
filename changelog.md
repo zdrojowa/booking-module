@@ -34,3 +34,6 @@ All notable changes to `BookingModule` will be documented in this file.
 
 ## Version 1.2.0
 - Add booking custom link
+
+## Version 1.2.1
+- Update link if there's no dates
